@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Questions & Réponses — Cancer du sein</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎀 Questions & Réponses</h1>
+    <nav><a href="INDEX.html">Accueil</a> | <a href="about.html">À propos</a></nav>
+  </header>
+
+  <main class="container">
+    <div class="qa-container">
+      <!-- Liste des questions suggérées -->
+      <section class="questions-list">
+        <h3> Questions Populaires</h3>
+        <p class="subtitle">Cliquez sur une question ou posez votre propre question :</p>
+        <div class="question-buttons">
+          <button class="question-btn" data-question="Quels sont les symptômes du cancer du sein ?">
+            Quels sont les symptômes du cancer du sein ?
+          </button>
+          <button class="question-btn" data-question="Quel est le taux de survie en cas de détection précoce ?">
+            Quel est le taux de survie en cas de détection précoce ?
+          </button>
+          <button class="question-btn" data-question="Comment faire un auto-examen des seins ?">
+            Comment faire un auto-examen des seins ?
+          </button>
+          <button class="question-btn" data-question="Quels sont les facteurs de risque du cancer du sein ?">
+            Quels sont les facteurs de risque ?
+          </button>
+          <button class="question-btn" data-question="À partir de quel âge faire une mammographie ?">
+            À partir de quel âge faire une mammographie ?
+          </button>
+          <button class="question-btn" data-question="Qu'est-ce que le BRCA1 et BRCA2 ?">
+            Qu'est-ce que le BRCA1 et BRCA2 ?
+          </button>
+          <button class="question-btn" data-question="Comment accéder aux traitements en Afrique ?">
+            Comment accéder aux traitements en Afrique ?
+          </button>
+          <button class="question-btn" data-question="Quel est l'impact du cancer du sein dans les pays en développement ?">
+            Quel est l'impact en pays en développement ?
+          </button>
+          <button class="question-btn" data-question="Y a-t-il une prévention efficace du cancer du sein ?">
+            Y a-t-il une prévention efficace ?
+          </button>
+          <button class="question-btn" data-question="Quelles organisations soutiennent les femmes atteintes du cancer du sein ?">
+            Quelles organisations soutiennent les femmes ?
+          </button>
+        </div>
+      </section>
+
+      <!-- Formulaire de question -->
+      <section class="question-form-section">
+        <h3>❓ Poser une Question</h3>
+        <form id="queryForm" class="query-form">
+          <label for="userQuestion">Votre question :</label>
+          <textarea 
+            id="userQuestion" 
+            name="question" 
+            placeholder="Posez votre question sur le cancer du sein, le dépistage, les traitements, la situation en Afrique..." 
+            required
+            rows="5">
+          </textarea>
+          <button type="submit" class="btn">Envoyer la Question</button>
+        </form>
+
+        <!-- Réponse affichée -->
+        <section id="answerSection" class="answer-section" style="display: none;">
+          <h3> Réponse :</h3>
+          <div id="answerContent" class="answer-content">
+            <!-- La réponse s'affichera ici -->
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <!-- Base de données de réponses -->
+    <section id="resourcesSection" style="margin-top: 40px;">
+      <h3> Ressources et Informations</h3>
+      <div id="resources" class="resources-grid">
+        <!-- Les ressources seront affichées ici -->
+      </div>
+    </section>
+
+    <!-- Section pour ajouter des informations (optionnel) -->
+    <section class="add-resource-section" style="margin-top: 40px;">
+      <h3> Contribuer une information</h3>
+      <details>
+        <summary>Cliquez pour ajouter une ressource</summary>
+        <form id="addForm" class="add-form">
+          <label for="resourceTitle">Titre :</label>
+          <input id="resourceTitle" name="title" type="text" placeholder="Ex: Centres de dépistage au Sénégal" required>
+          
+          <label for="resourceRegion">Région/Pays :</label>
+          <input id="resourceRegion" name="region" type="text" placeholder="Ex: Afrique de l'Ouest" required>
+          
+          <label for="resourceCategory">Catégorie :</label>
+          <select id="resourceCategory" name="category" required>
+            <option value="">Sélectionnez une catégorie</option>
+            <option value="Dépistage">Dépistage</option>
+            <option value="Traitement">Traitement</option>
+            <option value="Prévention">Prévention</option>
+            <option value="Ressources">Ressources</option>
+            <option value="Statistiques">Statistiques</option>
+          </select>
+          
+          <label for="resourceContent">Contenu :</label>
+          <textarea id="resourceContent" name="content" placeholder="Décrivez la ressource ou l'information..." required rows="4"></textarea>
+          
+          <button type="submit" class="btn">Partager cette ressource</button>
+        </form>
+      </details>
+    </section>
+  </main>
+
+  <footer><small>© 2025 — Plateforme d'Information sur le Cancer du Sein</small></footer>
+  <script src="main.js"></script>
+</body>
+</html>
